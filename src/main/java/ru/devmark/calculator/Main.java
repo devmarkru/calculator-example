@@ -3,7 +3,7 @@ package ru.devmark.calculator;
 public class Main {
 
     public static void main(String[] args) {
-        var calculator = new Calculator();
+        Calculator calculator = new Calculator();
         calculator.calculate("   12*5   - 36 / 3"); // 48
         calculator.calculate("12 + 50 / 5 - 3  "); // 19
         calculator.calculate("   20 * ( 45 + 5 ) / 10"); // 100

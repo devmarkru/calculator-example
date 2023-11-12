@@ -16,9 +16,9 @@ public class StackMachine {
             if (token instanceof NumberToken number) {
                 valueStack.push(number.value());
             } else if (token instanceof BinaryOperationToken operation) {
-                var right = valueStack.pop();
-                var left = valueStack.pop();
-                var result = switch (operation.operationType()) {
+                int right = valueStack.pop();
+                int left = valueStack.pop();
+                int result = switch (operation.operationType()) {
                     case PLUS -> left + right;
                     case MINUS -> left - right;
                     case MULTIPLY -> left * right;

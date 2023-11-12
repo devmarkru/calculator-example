@@ -12,8 +12,8 @@ public class Calculator {
 
     public int calculate(String expression) {
         List<Token> tokens = lexer.getTokens(expression);
-        var postfixExpression = converter.convertToPostfix(tokens);
-        var result = stackMachine.evaluate(postfixExpression);
+        List<Token> postfixExpression = converter.convertToPostfix(tokens);
+        int result = stackMachine.evaluate(postfixExpression);
         System.out.println(result);
         return result;
     }

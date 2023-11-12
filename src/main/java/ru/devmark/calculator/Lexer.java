@@ -10,10 +10,10 @@ public class Lexer {
     private static final String DELIMITERS = " +-*/()";
 
     public List<Token> getTokens(String source) {
-        var tokenizer = new StringTokenizer(source, DELIMITERS, true);
+        StringTokenizer tokenizer = new StringTokenizer(source, DELIMITERS, true);
         List<Token> tokens = new ArrayList<>();
         while (tokenizer.hasMoreTokens()) {
-            var token = tokenizer.nextToken();
+            String token = tokenizer.nextToken();
             if (token.isBlank()) {
                 continue;
             } else if (isNumber(token)) {
